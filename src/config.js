@@ -1,9 +1,12 @@
 // src/config.js
 
-// Forçamos a barra final e o caminho ADUMI/api
-const base = import.meta.env.VITE_API_URL || 'https://adumi-backend.onrender.com/ADUMI/api';
+// 1. Pegamos o que vem do Vercel
+const rawUrl = import.meta.env.VITE_API_URL || '';
 
-// Esta lógica garante que sempre teremos a barra final correta para o Axios
-export const API_URL = base.endsWith('/') ? base : `${base}/`;
+// 2. Se a URL não contiver o sufixo necessário, nós adicionamos manualmente
+// Isso é uma proteção caso a variável do Vercel venha errada
+export const API_URL = rawUrl.includes('/ADUMI/api') 
+  ? rawUrl 
+  : 'https://adumi-backend.onrender.com/ADUMI/api/';
 
-console.log("URL Base definitiva do Axios:", API_URL);
+console.log("URL Final que o Axios vai usar:", API_URL);
