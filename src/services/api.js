@@ -1,11 +1,12 @@
 import axios from 'axios';
 
-// Usamos a URL completa com o prefixo /ADUMI/api/ conforme o seu teste manual
+// ESQUEÇA O CONFIG.JS POR UM MOMENTO. 
+// Vamos escrever a URL completa aqui para forçar o Vite a gerar um novo arquivo.
 const api = axios.create({
   baseURL: 'https://adumi-backend.onrender.com/ADUMI/api/'
 });
 
-// Este log ajudará a confirmar se o novo código foi carregado no navegador
-console.log("Axios carregado com URL fixa: https://adumi-backend.onrender.com/ADUMI/api/");
+// Adicione este console.log com um texto diferente, como "VERSAO_NOVA_FORÇADA"
+console.log("VERSAO_NOVA_FORÇADA: Conectando em /ADUMI/api/");
 
 export default api;
