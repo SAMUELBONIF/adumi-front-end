@@ -1,0 +1,3 @@
+// src/config.js
+// Pegamos a URL do backend da variável de ambiente definida no Vercel
+export const API_URL = process.env.VUE_APP_API_URL;
