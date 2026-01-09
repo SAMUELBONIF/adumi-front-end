@@ -1,7 +1,9 @@
-import axios from 'axios'
+
+import axios from 'axios';
+import { API_URL } from '../config';  // importa a URL do config.js
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000/ADUMI/api/',
-})
+  baseURL: API_URL
+});
 
-export default api
+export default api;
