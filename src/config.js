@@ -1,7 +1,3 @@
 // src/config.js
-
-// 1. Tenta ler VITE_API_URL do Vercel
-// 2. Se não encontrar, usa o link do Render diretamente
-export const API_URL = import.meta.env.VITE_API_URL || 'https://adumi-backend.onrender.com';
-
-console.log("Conectando na API em:", API_URL);
+// Verifique no seu urls.py do Django qual é o caminho correto
+export const API_URL = import.meta.env.VITE_API_URL || 'https://adumi-backend.onrender.com/ADUMI/api';
